@@ -7,7 +7,10 @@ Un respositorio para practicar Git y GitHub
 el comando siguiente sirve para traer los cambios de la plataforma de GitHub
 
         -git pull origin master
-        -git config --global user.email "corre@acambiar.com"         -Permite cambiar le email
+        -git config --global user.email "corre@acambiar.com"        -Permite cambiar le email
+        -git branch branchName                                      -Crea una rama nueva
+        -git checkout branchName                                    -Cambia de rama
+        -git push origin branchName                                 -Publica la rama local en repositorio remoto
 
 ## Para crear una llave SSH
 
@@ -48,3 +51,36 @@ git tag                         -Muestra todos los tag disponibles en el reposit
 git show-ref --tags         -Muestra el id de los commits de cada tag
 
 Los tags no son cambios pero son utilies en GitHub para que otras personas lo vea
+
+git push origin --tags      -Envia a GitHub los tags creados en el repo
+
+git tag -d nombretag        -Elimina el tag creado solamente en git esto no se ve refleja en gitHub
+git push origin :refs/tags/nombretag  -Elimina el tag almacenado en GitHub
+
+En esta clase se aprende a crear y eliminar tags tanto en Git como en GitHub
+
+## Manejo de ramas en GitHub
+
+git show-branch                     -Muestra ramas que existen y cual es su historia
+git show-branch --all               -Muestra ramas que existen y cual es su historia pero con mas datos
+gitk                                -Muestra de forma mas visual la historia del repo
+
+## Configurar multiples coolaboradores en repositorio de GitHub
+
+Debemos de autorizar a nuevos usuarios para que pueda hacer push en gitHub esto se hace de la siguiente manera:
+
+en el repositorio se va a settings=>collaborators=>escribe el email a agregar o usuario
+
+la persona que quiere colaborar recibira un correo para que pueda colaborar en el repositorio
+
+## Flujo de trabajo profesional
+
+Para poder desarrollar software de manera óptima y ordenada, necesitamos tener un flujo de trabajo profesional, que nos permita trabajar en conjunto sin interrumpir el trabajo de otros desarrolladores. Una buena práctica de flujo de trabajo sería la siguiente:
+
+    1.- Crear ramas
+    2.- Asignar una rama a cada programador
+    3.- El programador baja el repositorio con git pull origin master
+    4.- El programador cambia de rama
+    5.- El programador trabaja en esa rama y hace commits
+    6.- El programador sube su trabajo con git push origin #nombre_rama
+    7.- El encargado de organizar el proyecto baja, revisa y unifica todos los cambios
