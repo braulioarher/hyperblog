@@ -28,3 +28,23 @@ Permite una comunicacion segura al mandar un mensaje cifrado con la llave public
 En GitHub se usa por temas de seguridad el protocolo SSH
 
 Para cambiar de protoculo HTTPS a SSH anteriormete debimos de haber creado nuestras llaves despues ubicarnos en nuestra carpeta de nuetro repositorio y ejecutar el comando git remote set-url origin linkdelrepositorioQueViveenGitHub
+
+## Clonar un repositorio
+
+Para clonar un repositorio basta con usar el siguiente comando
+    git clone SSHdelRepocitorio
+
+## Tags y versiones en Git y Github
+
+git log --all --graph --decorate --oneline
+
+el comando anterior sirve para mostar la historia de nuestro repositorio de una forma mas grafica para que esta pueda ser leida
+
+alias arbol="git log --all --graph --decorate --oneline"   sirve para crear un alias a un comando y acceder mas facilmente a el
+
+git tag -a v0.1 -m "Resultado de las primeras clases del curso" #######         crea un nuevo tag
+
+git tag                         -Muestra todos los tag disponibles en el repositorio
+git show-ref --tags         -Muestra el id de los commits de cada tag
+
+Los tags no son cambios pero son utilies en GitHub para que otras personas lo vea
