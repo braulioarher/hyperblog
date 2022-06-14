@@ -84,3 +84,5 @@ Para poder desarrollar software de manera óptima y ordenada, necesitamos tener 
     5.- El programador trabaja en esa rama y hace commits
     6.- El programador sube su trabajo con git push origin #nombre_rama
     7.- El encargado de organizar el proyecto baja, revisa y unifica todos los cambios
+
+Los archivos binarios tarda un poco en verse reflejados en GitHub por eso no es recomendable agregarlos en nuestro repositorio se recomienda trabajar unicamente con texto plano
